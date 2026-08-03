@@ -15,7 +15,6 @@ def test_registration_success(driver):
     driver.find_element(By.XPATH, locators.REGISTRATION_MAIL_FIELD).send_keys(test_email)
     driver.find_element(By.XPATH, locators.REGISTRATION_PSWD_FIELD).send_keys(test_pswd)
     driver.find_element(By.XPATH, locators.REGISTRATION_BUTTON).click()
-    print(f'Attempt registration with email: {test_email}') #debug
     WebDriverWait(driver, 5).until(expected_conditions.url_to_be('https://stellarburgers.education-services.ru/login'))
     assert driver.current_url == 'https://stellarburgers.education-services.ru/login'
 
