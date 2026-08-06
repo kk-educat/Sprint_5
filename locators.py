@@ -25,4 +25,5 @@ EXIT_BUTTON = "//button[text()='Выход']"
 BUNS_SECTION = "//span[text()='Булки']"
 SAUCES_SECTION = "//span[text()='Соусы']"
 FILLINGS_SECTION = "//span[text()='Начинки']"
-ACTIVE_SECTION = "//div[contains(@class, 'tab_tab_type_current')]"
+# локатор активного раздела конструктора, где section_name может принимать 1 из значений: Булки, Соусы, Начинки
+ACTIVE_SECTION = "//div[contains(@class, 'tab_tab_type_current') and .//span[text()='{section_name}']]"
